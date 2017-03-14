@@ -12,7 +12,7 @@ parameters:
           - system.linux.system.lowmem
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.103
+            single_address: 172.15.10.103
             keepalived_vip_interface: eth0
             keepalived_vip_priority: 103
             mysql_cluster_role: master
@@ -28,7 +28,7 @@ parameters:
           - system.linux.system.lowmem
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.104
+            single_address: 172.15.10.104
             keepalived_vip_interface: eth0
             keepalived_vip_priority: 102
             mysql_cluster_role: slave
@@ -44,7 +44,7 @@ parameters:
           - system.linux.system.lowmem
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.105
+            single_address: 172.15.10.105
             keepalived_vip_interface: eth0
             keepalived_vip_priority: 101
             mysql_cluster_role: slave
@@ -58,9 +58,9 @@ parameters:
           - system.openstack.compute.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.105
-            opencontrail_compute_address: 172.16.10.106
-            opencontrail_compute_gateway: 172.16.10.1
+            single_address: 172.15.10.105
+            opencontrail_compute_address: 172.15.10.106
+            opencontrail_compute_gateway: 172.15.10.1
             opencontrail_compute_iface: eth0
         cmp02:
           name: cmp02
@@ -70,9 +70,9 @@ parameters:
           - system.openstack.compute.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.106
-            opencontrail_compute_address: 172.16.10.107
-            opencontrail_compute_gateway: 172.16.10.1
+            single_address: 172.15.10.107
+            opencontrail_compute_address: 172.15.10.107
+            opencontrail_compute_gateway: 172.15.10.1
             opencontrail_compute_iface: eth0
         web01:
           name: web01
@@ -82,9 +82,9 @@ parameters:
           - system.openstack.proxy.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.108
+            single_address: 172.15.10.108
             heka_shipper_output_exchange: heka
-            heka_shipper_output_host: 172.16.10.101
+            heka_shipper_output_host: 172.15.10.103
             heka_shipper_output_password: Use.toylett1823
             heka_shipper_output_vhost: heka
             heka_shipper_output_user: heka
@@ -96,7 +96,7 @@ parameters:
           - system.openstack.monitor.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.109
+            single_address: 172.15.10.109
         mtr01:
           name: mtr01
           domain: 
@@ -105,8 +105,8 @@ parameters:
           - system.openstack.meter.workshop
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.110
-            ceilometer_database_host: 172.16.10.110
+            single_address: 172.15.10.110
+            ceilometer_database_host: 172.15.10.110
         log01:
           name: log01
           domain: 
@@ -118,5 +118,5 @@ parameters:
           - system.openstack.log.single
           params:
             salt_master_host: ${_param:reclass_config_master}
-            single_address: 172.16.10.111
+            single_address: 172.15.10.111
 
